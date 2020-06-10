@@ -1,9 +1,13 @@
 {
   "backend": [
-    "example-stack-name-1",
-    "example-stack-name-2"
+    "api-process-events-domain",
+    "api-process-cashflows-irs" ,
+    "api-process-cashflows-zc-irs",
+    "api-process-riddler-irs-transactions",
+    "api-process-transactions-irs",
+    "api-process-transactions-zc-irs"
   ],
   "frontend": [
-    "example-stack-name-3"
+    
   ]
 }
