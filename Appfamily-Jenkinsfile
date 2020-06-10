@@ -11,8 +11,9 @@
 @Library('cardano') _
 
 // [MANDATORY] Include webhooks to notify your Teams channel of the success/failure of builds:
-String successOfficeWebhookUrl = "https://outlook.office.com/webhook/REPLACE_WITH_YOUR_WEBHOOK"
-String failureOfficeWebhookUrl = "https://outlook.office.com/webhook/REPLACE_WITH_YOUR_WEBHOOK"
+String successOfficeWebhookUrl = "https://outlook.office.com/webhook/7a4bc742-e813-4700-8b26-19f7ebb7e57c@2b4da3bd-71d4-456c-ad1b-63b788772a0d/JenkinsCI/92403d347536422db40392b2d81c751c/b2d7c357-f7a4-491c-af89-ddb1ad2e3615"
+String failureOfficeWebhookUrl = "https://outlook.office.com/webhook/7a4bc742-e813-4700-8b26-19f7ebb7e57c@2b4da3bd-71d4-456c-ad1b-63b788772a0d/JenkinsCI/92403d347536422db40392b2d81c751c/b2d7c357-f7a4-491c-af89-ddb1ad2e3615"
+
 
 // [MANDATORY] The invocation:
 cardanoAppFamily(successOfficeWebhookUrl: successOfficeWebhookUrl, 
