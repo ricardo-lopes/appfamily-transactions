@@ -1,0 +1,9 @@
+{
+  "backend": [
+    "example-stack-name-1",
+    "example-stack-name-2"
+  ],
+  "frontend": [
+    "example-stack-name-3"
+  ]
+}

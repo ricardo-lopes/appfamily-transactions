@@ -1,0 +1,19 @@
+#!/usr/bin/env groovy
+
+/*
+   Standardized Cardano Rancher AppFamily Jenkinsfile (04-09-2018)
+   https://github.com/cardano/appfamily-template
+   
+   Remember to define your app family stacks in the apps.json!
+*/
+
+// [MANDATORY] Import the unified Cardano Jenkins build library:
+@Library('cardano') _
+
+// [MANDATORY] Include webhooks to notify your Teams channel of the success/failure of builds:
+String successOfficeWebhookUrl = "https://outlook.office.com/webhook/REPLACE_WITH_YOUR_WEBHOOK"
+String failureOfficeWebhookUrl = "https://outlook.office.com/webhook/REPLACE_WITH_YOUR_WEBHOOK"
+
+// [MANDATORY] The invocation:
+cardanoAppFamily(successOfficeWebhookUrl: successOfficeWebhookUrl, 
+                 failureOfficeWebhookUrl: failureOfficeWebhookUrl)

@@ -1,0 +1,23 @@
+{
+  "backend": [
+    "example-stack-name-1",
+    "example-stack-name-2"
+  ],
+  "frontend": [
+    "example-stack-name-3"
+  ],
+  "customEnvkeyMappings": {
+    "backend": {
+      "example-stack-name-2": {
+        "ENVKEY_VARIABLE_NAME_1": "envkey-repo-name-1"
+      }
+    },
+    "frontend": {
+      "example-stack-name-3": {
+        "ENVKEY_VARIABLE_NAME_1": "envkey-repo-name-1",
+        "ENVKEY_VARIABLE_NAME_2": "envkey-repo-name-2",
+        "ENVKEY_VARIABLE_NAME_3": "envkey-repo-name-3"
+      }
+    }
+  }
+}
