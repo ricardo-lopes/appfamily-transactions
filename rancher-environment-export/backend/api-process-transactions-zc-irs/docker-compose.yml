@@ -1,0 +1,19 @@
+version: '2'
+services:
+  api:
+    image: cardano.azurecr.io/api-process/transactions-zc-irs:CAB-2752-0.0.680
+    stdin_open: true
+    logging:
+      driver: gelf
+      options:
+        gelf-address: udp://127.0.0.1:5000
+        gelf-compression-type: none
+        tag: api-process-transactions-zc-irs
+    user: root
+    labels:
+      traefik.frontend.rule: PathPrefixStrip:/transactions-zcirs
+      traefik.enabled: 'true'
+      io.rancher.scheduler.affinity:host_label: container_host=true
+      traefik.port: '80'
+      io.rancher.container.pull_image: always
+      traefik.frontend.entryPoints: http,https

@@ -1,0 +1,21 @@
+version: '2'
+services:
+  api-process-events-domain:
+    image: cardano.azurecr.io/api-process/events-domain:CAB-2752
+    stdin_open: true
+    tty: true
+    logging:
+      driver: gelf
+      options:
+        gelf-address: udp://127.0.0.1:5000
+        gelf-compression-type: none
+        tag: api-process-events-domain
+    labels:
+      traefik.frontend.rule: PathPrefixStrip:/events-domain
+      traefik.enable: 'true'
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+      io.rancher.scheduler.affinity:host_label: container_host=true
+      traefik.port: '32990'
+      io.rancher.container.pull_image: always
+      traefik.frontend.passHostHeader: '''true'''
+      traefik.frontend.entryPoints: http,https
